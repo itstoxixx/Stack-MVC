@@ -1,0 +1,71 @@
+﻿@model slack.Models.Seminar
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Seminar</h4>
+	<hr />
+
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.location)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SeminarDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SeminarDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Speaker)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Speaker)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        
+    </dl>
+</div>
+<button class="btn">
+    @Html.ActionLink("Register", "Create", "Attendee", new { id = Model.Title}, null)
+</button>
+<p>
+   
+    @Html.ActionLink("Back to List", "Index")
+</p>
